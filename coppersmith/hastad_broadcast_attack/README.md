@@ -1,4 +1,4 @@
-#Hastad Broadcast Attack
+# Hastad Broadcast Attack
 ## 概要
 同一の平文$M$を$k$人に対して送る例を考えます。このとき、$i$番目の人の暗号文$C_i$は以下の様に計算できます。
 
