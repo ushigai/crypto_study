@@ -16,18 +16,9 @@ class RSA:
         self.d = inverse(self.e, phi)
 
     def encryption(self, m):
-        if isinstance(m, str):
-            m = bytes_to_long(m.encode("utf-8"))
-        if isinstance(m, bytes):
-            m = bytes_to_long(m)
         c = pow(m, self.e, self.N)
         return c
 
-    def decryption(self, c):
-        m = pow(c, self.d, self.N)
-        m = long_to_bytes(m)
-        return m
-    
     def pgcd(self, f, g):
         while g:
             f, g = g, f % g
